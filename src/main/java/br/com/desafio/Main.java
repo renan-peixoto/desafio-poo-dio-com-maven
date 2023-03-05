@@ -1,5 +1,6 @@
-import java.time.LocalDate;
+package br.com.desafio;
 
+import java.time.LocalDate;
 import br.com.desafio.dominio.Bootecamp;
 import br.com.desafio.dominio.Curso;
 import br.com.desafio.dominio.Dev;
