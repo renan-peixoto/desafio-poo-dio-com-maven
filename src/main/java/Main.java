@@ -18,8 +18,9 @@ public class Main {
         renanDev.progredir();
         renanDev.progredir();
 
-        System.out.println(renanDev.getConteudosInscritos());
-        System.out.println(cursoJava.calcularXp() + mentoria.calcularXp());
+        System.out.println("Conteúdos Inscritos Renan:" + renanDev.getConteudosInscritos());
+
         System.out.println(renanDev.calcularTotalXp());
+        System.out.println(renanDev.getConteudosConcluidos());
     }
 }
