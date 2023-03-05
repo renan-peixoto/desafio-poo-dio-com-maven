@@ -1,9 +1,25 @@
-import br.com.desafio.dominio.Conteudo;
+import java.time.LocalDate;
+
+import br.com.desafio.dominio.Bootecamp;
 import br.com.desafio.dominio.Curso;
+import br.com.desafio.dominio.Dev;
+import br.com.desafio.dominio.Mentoria;
 
 public class Main {
     public static void main(String[] args) {
-        Conteudo curso1 = new Curso("java", "descricao java", 8);
-        System.out.println(curso1.calcularXp());
+        Curso cursoJava = new Curso("java", "curso java descriçao", 2);
+        Mentoria mentoria = new Mentoria("TDD", "Mentoria de TDD", LocalDate.of(2023, 03, 15));
+        Bootecamp bootecamp = new Bootecamp("Java Bootcamp", "descriçao");
+        Dev renanDev = new Dev("Renan");
+
+        bootecamp.getConteudos().add(cursoJava);
+        bootecamp.getConteudos().add(mentoria);
+        renanDev.inscreverBootcamp(bootecamp);
+        renanDev.progredir();
+        renanDev.progredir();
+
+        System.out.println(renanDev.getConteudosInscritos());
+        System.out.println(cursoJava.calcularXp() + mentoria.calcularXp());
+        System.out.println(renanDev.calcularTotalXp());
     }
 }
